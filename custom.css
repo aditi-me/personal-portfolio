@@ -1,0 +1,196 @@
+body {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+  background-color: #eee6e2;
+  color: #4d2e2b;
+}
+
+.custom-navbar {
+  background-color: #c0958b;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  z-index: 9999;
+}
+
+.custom-navbar .nav-link{
+  color: #232e6b !important;
+}
+
+.custom-navbar .navbar-brand {
+  color: white !important;
+}
+
+.custom-navbar.scrolled {
+  background-color: rgba(192, 149, 139, 0.85); /* semi-transparent */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.navbar a,
+.navbar .navbar-brand {
+  color: #1c1540;
+}
+
+.navbar .nav-link:hover {
+  color: white !important;
+}
+
+.navbar a:hover {
+  color: #232e6b;
+}
+
+.about-img {
+  width: 90%;
+  height: auto;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+
+.SM-link {
+  color: #232e6b;
+}
+
+.SM-link:hover {
+  color: #0a0b41;
+}
+
+#about {
+  width: 70%;
+  margin: 100px auto;
+  background-color: #dcbcaf;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+#skills {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#projects {
+  width: 70%;
+  margin: 100px auto;
+}
+
+.progress-bar {
+  background-color: #0a0b41;
+  transition: background-color 0.3s ease;
+}
+
+.progress-bar:hover {
+  background-color: #c0958b !important;
+}
+
+.project-card {
+  min-width: 250px;
+  background-color: #eee6e2;
+  border: 1px solid #ccb6a8;
+}
+
+.project-card .card-title {
+  color: #232e6b;
+}
+
+.project-scroll {
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#education {
+  width: 70%;
+  margin: 100px auto;
+}
+
+.footer {
+  background-color: #c0958b;
+  color: #0a0b41;
+  text-align: center;
+  padding: 1rem;
+}
+
+.btn-primary {
+  background-color: #232e6b;
+  border-color: #232e6b;
+  color: #eee6e2;
+}
+
+.btn-primary:hover {
+  background-color: #0a0b41;
+  border-color: #0a0b41;
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+@media print {
+  #projects,
+  #skills,
+  #education {
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
+}
+
+@media (max-width: 800px) {
+  #navbarNav {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    background-color: #c0958b;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    z-index: 1050;
+  }
+
+  #navbarNav.show {
+    max-height: 300px;
+  }
+
+  #navbarNav .navbar-nav {
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 5px;
+  }
+
+  #navbarNav .nav-link {
+    color: #1c1540;
+    padding: 0.75rem 1.25rem;
+    text-align: right;
+    width: fit-content;
+  }
+
+  #about {
+    transition: margin-top 0.4s ease;
+  }
+
+  #navbarNav.show ~ #about {
+    margin-top: 300px;
+  }
+
+  body.nav-open #about {
+    margin-top: 250px;
+  }
+
+  .aboutabout {
+    padding-top: 20px;
+  }
+
+  .project-scroll {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .about-img {
+  width: 100%;
+}
+}
